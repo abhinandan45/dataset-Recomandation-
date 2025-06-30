@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 model = joblib.load('model.pkl',wb)
 vectorizer = joblib.load('vectorizer.pkl',wb)
-df = joblib.load('dataset.pkl')
+df = joblib.load('dataset.pkl',wb)
 
 @app.route('/')
 def index():
