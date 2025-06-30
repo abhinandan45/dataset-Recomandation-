@@ -3,8 +3,8 @@ import joblib
 
 app = Flask(__name__)
 
-model = joblib.load('model.pkl')
-vectorizer = joblib.load('vectorizer.pkl')
+model = joblib.load('model.pkl',wb)
+vectorizer = joblib.load('vectorizer.pkl',wb)
 df = joblib.load('dataset.pkl')
 
 @app.route('/')
