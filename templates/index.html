@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ML Dataset Recommender</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">📊 ML Recommender</div>
+    <ul>
+      <li><a href="/">Home</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Find the <span class="highlight">Perfect Dataset</span> for Your ML Project</h1>
+    <p>Enter your project idea and get instant smart recommendations</p>
+
+    <!-- Input Form -->
+    <form method="POST" action="/recommend">
+      <input type="text" name="project_info" placeholder="e.g., image classification, NLP dataset" required />
+      <button type="submit">🚀 Recommend</button>
+    </form>
+  </section>
+
+  <!-- Recommendation Results -->
+  {% if recommendations %}
+  <section class="results-wrapper">
+    <h2>🔍 Smart Recommendations</h2>
+    <div class="results">
+      {% for dataset in recommendations %}
+        <div class="card">
+          <h3>{{ dataset.Dataset_name }}</h3>
+          <p><strong>Author:</strong> {{ dataset.Author_name }}</p>
+          <p><strong>Type:</strong> {{ dataset.Type_of_file }}</p>
+          <p><strong>Usability:</strong> {{ dataset.Usability }} | 
+             <strong>Upvotes:</strong> {{ dataset.Upvotes }} | 
+             <strong>Medals:</strong> {{ dataset.Medals }}</p>
+          <a href="{{ dataset.Dataset_link }}" target="_blank">🌐 View Dataset</a>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- Footer -->
+  <footer>
+    Made with ❤️ by Abhinandan | &copy; 2025
+  </footer>
+
+</body>
+</html>

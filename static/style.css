@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Outfit', sans-serif;
+  background: linear-gradient(135deg, #f0f4ff, #e6f3ff);
+  color: #2a2a2a;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+  background: #121c3d;
+  padding: 18px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+nav .logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+nav ul li a:hover {
+  color: #ffd54f;
+}
+
+/* Hero */
+.hero {
+  padding: 80px 30px;
+  text-align: center;
+  background: radial-gradient(circle at center, #dbeafe, #ffffff);
+}
+.hero h1 {
+  font-size: 34px;
+  font-weight: 600;
+}
+.hero .highlight {
+  color: #1e40af;
+  background: #e0f2fe;
+  padding: 4px 10px;
+  border-radius: 10px;
+}
+.hero p {
+  margin-top: 12px;
+  font-size: 18px;
+  color: #555;
+}
+
+/* Input Form */
+form {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+form input {
+  padding: 14px 20px;
+  width: 300px;
+  border: 1px solid #aaa;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+form input:focus {
+  border-color: #1e40af;
+}
+form button {
+  background: #1e40af;
+  color: white;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+form button:hover {
+  background: #3b82f6;
+}
+
+/* Results Section */
+.results-wrapper {
+  padding: 50px 30px;
+  background: #f0f6ff;
+  text-align: center;
+}
+.results-wrapper h2 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  color: #1e40af;
+}
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 10px;
+}
+.card {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card h3 {
+  color: #1e40af;
+  margin-bottom: 10px;
+}
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  background: #1e40af;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+}
